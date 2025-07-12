@@ -7,27 +7,19 @@ export default function Reach() {
   const socialLinks: SocialLink[] = [
     {
       name: "twitter/x",
-      url: "https://twitter.com/code_kartik",
+      url: "https://x.com/manashanand2",
     },
     {
       name: "github",
-      url: "https://github.com/KartikLabhshetwar",
+      url: "https://github.com/ManashAnand",
     },
     {
       name: "linkedin",
-      url: "https://www.linkedin.com/in/kartikcode/",
-    },
-    {
-      name: "peerlist",
-      url: "https://peerlist.io/code_kartik",
+      url: "https://www.linkedin.com/in/manash-anand-479812227/",
     },
     {
       name: "say hello",
-      url: "mailto:kartik.labhshetwar@gmail.com",
-    },
-    {
-      name: "book a meet",
-      url: "https://cal.com/kartik-labhshetwar/15min",
+      url: "mailto:anandmanash321@gmail.com",
     },
   ];
 

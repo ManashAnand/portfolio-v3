@@ -86,6 +86,44 @@ export const features = [
 ]
 
 
+export const blogPosts = [
+  {
+    author: "Manash Anand",
+    title: "Impermanent loss example",
+    src: "/harry.png",
+    link:"https://medium.com/@anandmanash321/impermanent-loss-example-e99ed5efe395"
+  },
+  {
+    author: "Manash Anand",
+    title: "Squadcast interview experience for SDE Intern + PPO ( Part 1 )",
+    src: "products.png",
+    link:"https://medium.com/@anandmanash321/squadcast-interview-experience-for-sde-intern-ppo-part-1-3cb2c8aad260"
+  },
+  {
+    author: "Manash Anand",
+    title: "Error: A Serverless Function has exceeded the unzipped maximum size of 250 MB",
+    src: "/truffles.png",
+    link:"https://medium.com/@anandmanash321/error-a-serverless-function-has-exceeded-the-unzipped-maximum-size-of-250-mb-990af9b2346d"
+  },
+  {
+    author: "Manash Anand",
+    title: "Tired of node_modules in your drives or folder",
+    link: "https://medium.com/@anandmanash321/tired-of-node-modules-in-your-drives-or-folder-dd73f88e13eb",
+    src:"/sym.png"
+  },
+  {
+    author: "Manash Anand",
+    title: "How to make a webhook for email using gmail api ?",
+    link: "https://medium.com/@anandmanash321/how-to-make-a-webhook-for-email-using-gmail-api-4ee6f60a481f",
+    src:"puchai.jpg"
+  },
+  {
+    author: "Manash Anand",
+    title: "Using Nextjs, Aceternity UI and ShadcnUI all together",
+    link: "https://medium.com/@anandmanash321/using-nextjs-aceternity-ui-and-shadcnui-all-together-e59c1ee93091",
+    src:"oneko.gif"
+  },
+];
 
 export const featureDetails: Record<string, {
     imageUrl: string;

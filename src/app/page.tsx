@@ -9,10 +9,11 @@ import Link from "next/link"
 import { projects } from '@/data/projects'
 import { ProjectCard } from '@/components/ProjectCard'
 import { Geist } from "next/font/google"
-import { tags, resume_link, email_addr } from '@/data/tags'
+import { tags, resume_link, email_addr, blogPosts } from '@/data/tags'
 import { easeOut, motion } from "motion/react"
 import { LinkPreview } from "@/components/ui/link-preview"
 import ProjectsBox from "@/components/Project-Box"
+import { AnimatedBlogs } from "@/components/AnimatedBlogCard"
 
 
 const geistMono = Geist({
@@ -76,12 +77,6 @@ export default function Home() {
       <OnekoCat />
       <div className="flex flex-col items-start px-6 md:px-12 pt-4 md:pt-6 space-y-8 md:space-y-12 max-w-3xl w-full mx-auto">
         <div className="w-full flex justify-end items-center gap-4">
-          <Link href={"/projects"} className="text-md md:text-lg hover:underline">
-            projects
-          </Link>
-          <Link href={"/blogs"} className="text-md md:text-lg hover:underline">
-            blogs
-          </Link>
           <ModeToggle />
         </div>
         <div>
@@ -142,7 +137,7 @@ export default function Home() {
                 <motion.span
                   key={item.id}
                   variants={itemVariants}
-                  className="px-4 py-2 bg-neutral-500 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base"
+                  className="px-4 py-2 border-2 border-cyan-400 dark:border-cyan-900 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-md text-sm md:text-base"
                 >
                   {item.title}
                 </motion.span>
@@ -155,7 +150,7 @@ export default function Home() {
               initial="hidden"
               animate="show"
               href={resume_link || "https://drive.google.com/file/d/1w5FIrtbSffRxgjW8iWVqYMyX5KOiDA-c/view?usp=sharing"}
-              className="inline-flex items-center justify-center px-3 py-2 bg-neutral-500 dark:bg-neutral-800/30 text-neutral-800 dark:text-neutral-200 rounded-md border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-700/50 transition-colors font-medium"
+              className="inline-flex items-center justify-center px-3 py-2  dark:bg-neutral-800/30 text-neutral-800 dark:text-neutral-200 rounded-md border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-700/50 transition-colors font-medium"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -188,47 +183,31 @@ export default function Home() {
             initial="hidden"
             animate="show"
             className="text-xl md:text-2xl font-medium mb-4">Projects</motion.h2>
-          {/* <div className="space-y-2">
-            {projects.slice(0, 3).map(project => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div> */}
           <ProjectsBox/>
-          <Link
-            href="/projects"
+          <a
+            href="https://github.com/ManashAnand?tab=repositories"
+            target="_blank"
             className="inline-flex items-center mt-6 text-base md:text-lg hover:underline"
           >
             View all projects →
-          </Link>
+          </a>
         </div>
 
-        <div className="w-full">
-          <h2 className="text-xl md:text-2xl font-medium mb-4">Blog</h2>
-          <div className="mb-4">
-            <p className="text-base md:text-lg text-neutral-600 dark:text-neutral-400 mb-4">
-              I occasionally write about web development, AI, and other technical topics.
-            </p>
-            <Link
-              href="/blogs"
-              className="inline-flex items-center text-base md:text-lg hover:underline"
-            >
-              View all posts →
-            </Link>
-          </div>
+          <div className="w-full">
+          <motion.h2 variants={fadeInUp}
+            initial="hidden"
+            animate="show" className="text-xl md:text-2xl font-medium mb-4">Experience</motion.h2>
+          <Experience />
+        </div>
+          <div className="w-full">
+          <motion.h2 variants={fadeInUp}
+            initial="hidden"
+            animate="show" className="text-xl md:text-2xl font-medium mb-4">Blogs</motion.h2>
+          <AnimatedBlogs Blogs={blogPosts}/>
         </div>
 
-        {/* <div className="w-full">
-          <h2 className="text-lg font-medium mb-2">Skills</h2>
-          <p className="text-xs md:text-sm font-light">
-            List your technical skills and expertise
-          </p>
-        </div>
-        <div className="w-full">
-          <h2 className="text-lg font-medium mb-2">Moments</h2>
-          <p className="text-xs md:text-sm font-light">
-            Share significant achievements or milestones
-          </p>
-        </div> */}
+        
+ 
         <div className="w-full">
           <h2 className="text-xl md:text-2xl font-medium mb-4">Contact</h2>
           <Reach />
