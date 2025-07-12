@@ -25,37 +25,35 @@ export const experiences = [
         company: "Truffles.ai",
         position: "Backend Engineer",
         duration: "June 2024 – Present",
-        description: `Developed and deployed cutting-edge solutions, including multi-select preferences, 
-        browser-based video recording, and API integrations like WhatsApp/email reminders. 
-        Optimized workflows with autosave features and real-time scraping, 
-        leveraging Next.js, Supabase, and Cloudflare workers.`,
+
         href: "https://www.truffles.ai/",
         logoUrl: "/truffles.png",
-        location:"Remote/Singapore"
+        location: "Remote/Singapore"
     },
     {
-        company: "Puch AI",
-        position: "Software Engineering Intern",
-        duration: "June 2025 – Present",
-        description: `Developed and deployed cutting-edge solutions, including multi-select preferences, 
-        browser-based video recording, and API integrations like WhatsApp/email reminders. 
-        Optimized workflows with autosave features and real-time scraping, 
-        leveraging Next.js, Supabase, and Cloudflare workers.`,
-        href: "https://puch.ai",
-        logoUrl: "/puchai.jpg",
-        location:"Remote/Singapore"
+        company: "UNICORNIZ",
+        position: "Full Stack Developer",
+        duration: "April 2023 – March 2024",
+
+        href: "",
+        logoUrl: "/unicorniz.jpeg",
+        location: "Remote/A&N"
     },
     {
-        company: "Lamarr",
+        company: "Symutte Labs",
         position: "Full stack developer Intern",
-        duration: "Nov 2024 – Dec 2024",
-        description: `Developed and deployed cutting-edge solutions, including multi-select preferences, 
-        browser-based video recording, and API integrations like WhatsApp/email reminders. 
-        Optimized workflows with autosave features and real-time scraping, 
-        leveraging Next.js, Supabase, and Cloudflare workers.`,
-        href: "https://www.lamarr.tech/",
-        logoUrl: "/lamarr.png",
-        location:"Remote/Singapore"
+        duration: "Nov 2022 – Jan 2023",
+        href: "https://unicorniz.com/",
+        logoUrl: "/sym.png",
+        location: "Remote/Mandi"
+    },
+    {
+        company: "Gradup",
+        position: "Web developer Intern",
+        duration: "July 2022 – Sep 2022",
+        href: "https://www.gradup.in/",
+        logoUrl: "/gradup.jpeg",
+        location: "Remote/Noida"
     },
 ];
 

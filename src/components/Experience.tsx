@@ -36,7 +36,7 @@ export default function Experience() {
   }
 
   return (
-    
+
     <motion.div
       variants={containerVariants}
       initial="hidden"
@@ -46,7 +46,7 @@ export default function Experience() {
         <motion.div
           variants={expVariants}
           key={exp.company} className="flex items-center gap-4 mb-4  rounded-md p-2">
-             
+
           {exp.logoUrl && (
             <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
               <AvatarImage
@@ -78,7 +78,7 @@ export default function Experience() {
                   {exp.position}
                 </p>
               </div>
-              <div className="text-sm md:text-base text-neutral-800 dark:text-neutral-400 whitespace-nowrap flex flex-col">
+              <div className="text-sm md:text-base text-neutral-800 dark:text-neutral-400 whitespace-nowrap flex flex-col min-w-[50px] items-end">
                 <div>
 
                   {exp.duration}
