@@ -12,6 +12,7 @@ import { Geist } from "next/font/google"
 import { tags, resume_link, email_addr } from '@/data/tags'
 import { easeOut, motion } from "motion/react"
 import { LinkPreview } from "@/components/ui/link-preview"
+import ProjectsBox from "@/components/Project-Box"
 
 
 const geistMono = Geist({
@@ -182,12 +183,17 @@ export default function Home() {
         </div>
 
         <div className="w-full">
-          <h2 className="text-xl md:text-2xl font-medium mb-4">Work</h2>
-          <div className="space-y-2">
+          <motion.h2
+            variants={fadeInUp}
+            initial="hidden"
+            animate="show"
+            className="text-xl md:text-2xl font-medium mb-4">Projects</motion.h2>
+          {/* <div className="space-y-2">
             {projects.slice(0, 3).map(project => (
               <ProjectCard key={project.id} project={project} />
             ))}
-          </div>
+          </div> */}
+          <ProjectsBox/>
           <Link
             href="/projects"
             className="inline-flex items-center mt-6 text-base md:text-lg hover:underline"
