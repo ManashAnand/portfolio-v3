@@ -88,7 +88,7 @@ export default function ProjectsBox() {
                                         animate={{ opacity: 1 }}
                                         transition={{ delay: 0.1 }}
                                     >
-                                        <img src={featureDetails[selectedFeature].imageUrl} alt={featureDetails[selectedFeature].descp} />
+                                        <img src={featureDetails[selectedFeature]?.imageUrl} alt={featureDetails[selectedFeature]?.descp} />
 
                                     </motion.h2>
                                     <motion.p
@@ -97,13 +97,12 @@ export default function ProjectsBox() {
                                         animate={{ opacity: 1 }}
                                         transition={{ delay: 0.2 }}
                                     >
-                                        {featureDetails[selectedFeature].descp || ""}
-                                        descp
+                                        {featureDetails[selectedFeature]?.descp || ""}
                                     </motion.p>
                                     <div className="flex px-6 gap-4 items-center ">
 
                                         {
-                                            featureDetails[selectedFeature].github && (
+                                            featureDetails[selectedFeature]?.github && (
                                                 <motion.div className=" mb-4 cursor-pointer" whileHover={{scale:1.5,transition:{duration:0.2}}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
                                                     <FaGithub />
                                                 </motion.div>

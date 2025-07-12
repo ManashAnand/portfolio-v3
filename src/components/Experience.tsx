@@ -4,8 +4,6 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { experiences } from '@/data/tags'
 import { easeOut, motion } from 'motion/react'
 
-import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 
 export default function Experience() {

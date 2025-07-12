@@ -68,61 +68,61 @@ export const features = [
         title: "warp-v1",
     },
     {
-        id: "roadmap",
-        title: "Personalised roadmap",
+        id: "Sol Terminal",
+        title: "Sol Terminal",
     },
     {
-        id: "core",
-        title: "Core subjects",
+        id: "Spy Kam",
+        title: "Spy Kam",
     },
     {
-        id: "oops",
-        title: "OOPs module end to end",
+        id: "alfred",
+        title: "Alfred",
     },
     {
-        id: "premium",
-        title: "Premium Problems",
+        id: "Akhand Bharat",
+        title: "Akhand Bharat",
     },
 ]
 
 
 export const blogPosts = [
-  {
-    author: "Manash Anand",
-    title: "Impermanent loss example",
-    src: "/harry.png",
-    link:"https://medium.com/@anandmanash321/impermanent-loss-example-e99ed5efe395"
-  },
-  {
-    author: "Manash Anand",
-    title: "Squadcast interview experience for SDE Intern + PPO ( Part 1 )",
-    src: "products.png",
-    link:"https://medium.com/@anandmanash321/squadcast-interview-experience-for-sde-intern-ppo-part-1-3cb2c8aad260"
-  },
-  {
-    author: "Manash Anand",
-    title: "Error: A Serverless Function has exceeded the unzipped maximum size of 250 MB",
-    src: "/truffles.png",
-    link:"https://medium.com/@anandmanash321/error-a-serverless-function-has-exceeded-the-unzipped-maximum-size-of-250-mb-990af9b2346d"
-  },
-  {
-    author: "Manash Anand",
-    title: "Tired of node_modules in your drives or folder",
-    link: "https://medium.com/@anandmanash321/tired-of-node-modules-in-your-drives-or-folder-dd73f88e13eb",
-    src:"/sym.png"
-  },
-  {
-    author: "Manash Anand",
-    title: "How to make a webhook for email using gmail api ?",
-    link: "https://medium.com/@anandmanash321/how-to-make-a-webhook-for-email-using-gmail-api-4ee6f60a481f",
-    src:"puchai.jpg"
-  },
-  {
-    author: "Manash Anand",
-    title: "Using Nextjs, Aceternity UI and ShadcnUI all together",
-    link: "https://medium.com/@anandmanash321/using-nextjs-aceternity-ui-and-shadcnui-all-together-e59c1ee93091",
-    src:"oneko.gif"
-  },
+    {
+        author: "Manash Anand",
+        title: "Impermanent loss example",
+        src: "imp.webp",
+        link: "https://medium.com/@anandmanash321/impermanent-loss-example-e99ed5efe395"
+    },
+    {
+        author: "Manash Anand",
+        title: "Squadcast interview experience for SDE Intern + PPO ( Part 1 )",
+        src: "squadcast.webp",
+        link: "https://medium.com/@anandmanash321/squadcast-interview-experience-for-sde-intern-ppo-part-1-3cb2c8aad260"
+    },
+    {
+        author: "Manash Anand",
+        title: "Error: A Serverless Function has exceeded the unzipped maximum size of 250 MB",
+        src: "serverless.webp",
+        link: "https://medium.com/@anandmanash321/error-a-serverless-function-has-exceeded-the-unzipped-maximum-size-of-250-mb-990af9b2346d"
+    },
+    {
+        author: "Manash Anand",
+        title: "Tired of node_modules in your drives or folder",
+        link: "https://medium.com/@anandmanash321/tired-of-node-modules-in-your-drives-or-folder-dd73f88e13eb",
+        src: "modules.webp"
+    },
+    {
+        author: "Manash Anand",
+        title: "How to make a webhook for email using gmail api ?",
+        link: "https://medium.com/@anandmanash321/how-to-make-a-webhook-for-email-using-gmail-api-4ee6f60a481f",
+        src: "webhook.webp"
+    },
+    {
+        author: "Manash Anand",
+        title: "Using Nextjs, Aceternity UI and ShadcnUI all together",
+        link: "https://medium.com/@anandmanash321/using-nextjs-aceternity-ui-and-shadcnui-all-together-e59c1ee93091",
+        src: "shadcn.webp"
+    },
 ];
 
 export const featureDetails: Record<string, {
@@ -135,57 +135,57 @@ export const featureDetails: Record<string, {
     liveVideo: string;
 }> = {
     Tokenizer: {
-        imageUrl: "/harry.png",
+        imageUrl: "/products.png",
         descp: "Use natural language to interact with your blockchain agents via the tokenizer interface.",
-        tags: ["agent", "LLM", "blockchain"],
+        tags: ["agent", "LLM", "blockchain", "Mastra"],
         punchline: "Chat with your chain, not your CLI.",
-        github: "asdf",
-        livelink: "adf",
-        liveVideo: "adf"
+        github: "https://github.com/ManashAnand/Tokenizer",
+        livelink: "https://tokenizer-alpha.vercel.app/",
+        liveVideo: "https://x.com/manashanand2/status/1911339161950310552"
     },
     "warp-v1": {
-        imageUrl: "/assets/warp-v1.png",
+        imageUrl: "warp.png",
         descp: "A Rust-powered CLI infused with AI capabilities, system-level knowledge, and blazing speed.",
         tags: ["Rust", "CLI", "AI", "system"],
         punchline: "Warp into productivity with AI at your terminal.",
-        github: "",
+        github: "https://github.com/ManashAnand/warp-v1",
         livelink: "",
         liveVideo: ""
     },
-    roadmap: {
-        imageUrl: "/assets/roadmap.png",
-        descp: "Create a time-sensitive learning roadmap tailored to your schedule and career goals.",
-        tags: ["personalized", "learning", "planner"],
-        punchline: "No more guesswork. Just your roadmap, your pace.",
-        github: "",
-        livelink: "",
+    "Sol Terminal": {
+        imageUrl: "sol_terminal.png",
+        descp: "Have multiple lousy CLI in a single web interface .",
+        tags: ["Solana", "Web3", "motion"],
+        punchline: "No more fancy sites, just terminal interface on web.",
+        github: "https://github.com/ManashAnand/sol-terminal",
+        livelink: "https://sol-terminal.vercel.app/",
+        liveVideo: "https://x.com/manashanand2/status/1882101822309167434"
+    },
+    "Spy Kam": {
+        imageUrl: "spykam.png",
+        descp: "Just look up for the whole room with object detection using small model.",
+        tags: ["Shadcn", "Nextjs", "langchain"],
+        punchline: "See yourself as a person.",
+        github: "https://github.com/ManashAnand/SpyKam",
+        livelink: "https://spy-kam.vercel.app/",
         liveVideo: ""
     },
-    core: {
-        imageUrl: "/assets/core.png",
-        descp: "Master Computer Science fundamentals — DBMS, OS, and CN — from the ground up.",
-        tags: ["DBMS", "OS", "Computer Networks", "fundamentals"],
-        punchline: "Foundations that build futures.",
-        github: "",
-        livelink: "",
-        liveVideo: ""
+    alfred: {
+        imageUrl: "alfred.png",
+        descp: "Generate a chatbot with your specific data in 2 minutes, comes with an chrome extension too .",
+        tags: ["Cloudflare worker ai","Nextjs","Prisma"],
+        punchline: "Need an assistant, contact me .",
+        github: "https://github.com/ManashAnand/Alfred",
+        livelink: "https://alfred-tau.vercel.app/login",
+        liveVideo: "https://x.com/manashanand2/status/1856652531675369753"
     },
-    oops: {
-        imageUrl: "/assets/oops.png",
-        descp: "A complete OOPs module with videos, quizzes, and real-world problems to solidify your concepts.",
-        tags: ["OOP", "quiz", "video", "problems"],
-        punchline: "OOPs made simple, smart, and solid.",
-        github: "",
-        livelink: "",
-        liveVideo: ""
-    },
-    premium: {
-        imageUrl: "/assets/premium.png",
-        descp: "Access curated premium coding problems from top platforms — all in one place.",
-        tags: ["DSA", "premium", "coding", "interview"],
-        punchline: "Your backstage pass to elite problem sets.",
-        github: "",
-        livelink: "",
+    "Akhand Bharat": {
+        imageUrl: "akhand.png",
+        descp: "Compare your State, language and Caste — all in one place.",
+        tags: ["Jai", "Shree", "Ram"],
+        punchline: "And see how united we were .",
+        github: "https://github.com/ManashAnand/akhand-bharat",
+        livelink: "https://akhand-bharat.vercel.app/",
         liveVideo: ""
     },
 };

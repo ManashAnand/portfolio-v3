@@ -5,9 +5,6 @@ import Footer from "@/components/Footer"
 import OnekoCat from "@/components/OnekoCat"
 import Reach from "@/components/Reach"
 import Experience from "@/components/Experience"
-import Link from "next/link"
-import { projects } from '@/data/projects'
-import { ProjectCard } from '@/components/ProjectCard'
 import { Geist } from "next/font/google"
 import { tags, resume_link, email_addr, blogPosts } from '@/data/tags'
 import { easeOut, motion } from "motion/react"
@@ -183,7 +180,7 @@ export default function Home() {
             initial="hidden"
             animate="show"
             className="text-xl md:text-2xl font-medium mb-4">Projects</motion.h2>
-          <ProjectsBox/>
+          <ProjectsBox />
           <a
             href="https://github.com/ManashAnand?tab=repositories"
             target="_blank"
@@ -193,21 +190,16 @@ export default function Home() {
           </a>
         </div>
 
-          <div className="w-full">
-          <motion.h2 variants={fadeInUp}
-            initial="hidden"
-            animate="show" className="text-xl md:text-2xl font-medium mb-4">Experience</motion.h2>
-          <Experience />
-        </div>
-          <div className="w-full">
+   
+        <div className="w-full">
           <motion.h2 variants={fadeInUp}
             initial="hidden"
             animate="show" className="text-xl md:text-2xl font-medium mb-4">Blogs</motion.h2>
-          <AnimatedBlogs Blogs={blogPosts}/>
+          <AnimatedBlogs Blogs={blogPosts} />
         </div>
 
-        
- 
+
+
         <div className="w-full">
           <h2 className="text-xl md:text-2xl font-medium mb-4">Contact</h2>
           <Reach />
