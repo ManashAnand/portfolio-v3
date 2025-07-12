@@ -38,7 +38,7 @@ export const AnimatedBlogs = ({
             const interval = setInterval(handleNext, 5000);
             return () => clearInterval(interval);
         }
-    }, [autoplay]);
+    }, [autoplay,handleNext]);
 
     const randomRotateY = () => {
         return Math.floor(Math.random() * 21) - 10;
@@ -81,7 +81,7 @@ export const AnimatedBlogs = ({
                                     className="absolute inset-0 origin-bottom "
                                 >
                                     <a href={Blog.link} target="_blank">
-
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
                                             src={Blog.src}
                                             alt={Blog.author}

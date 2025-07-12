@@ -3,16 +3,10 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { ChevronRight, Code, Clock, Map, BookOpen, Zap, Crown, Link, VideoIcon } from "lucide-react"
-import { motion, AnimatePresence, scale } from "motion/react"
+import {  Link, VideoIcon } from "lucide-react"
+import { motion, AnimatePresence } from "motion/react"
 import { featureDetails, features } from '@/data/tags'
-import Image from "next/image"
 import { Badge } from "./ui/badge"
 import { FaGithub } from "react-icons/fa6"
 
@@ -88,6 +82,7 @@ export default function ProjectsBox() {
                                         animate={{ opacity: 1 }}
                                         transition={{ delay: 0.1 }}
                                     >
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img src={featureDetails[selectedFeature]?.imageUrl} alt={featureDetails[selectedFeature]?.descp} />
 
                                     </motion.h2>

@@ -34,18 +34,7 @@ export default function Home() {
       }
     }
   };
-  const fadeInLeft = {
-    hidden: { opacity: 0, x: 50 },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: 0.2,
-        duration: 0.4,
-        ease: easeOut
-      }
-    }
-  };
+
 
   const containerVariants = {
     hidden: {},
@@ -161,7 +150,7 @@ export default function Home() {
               variants={fadeInUp}
               initial="hidden"
               animate="show"
-              href={`mailto:anandmanash321@gmail.com`} className={`pl-4 text-lg md:text-xl hover:underline ${geistMono.className}`} >
+              href={`mailto:${email_addr}`} className={`pl-4 text-lg md:text-xl hover:underline ${geistMono.className}`} >
               Mail me
             </motion.a>
           </div>
