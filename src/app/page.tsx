@@ -11,6 +11,7 @@ import { ProjectCard } from '@/components/ProjectCard'
 import { Geist } from "next/font/google"
 import { tags, resume_link, email_addr } from '@/data/tags'
 import { easeOut, motion } from "motion/react"
+import { LinkPreview } from "@/components/ui/link-preview"
 
 
 const geistMono = Geist({
@@ -105,7 +106,29 @@ export default function Home() {
               initial="hidden"
               animate="show"
               className="text-base md:text-lg text-neutral-800 dark:text-neutral-200">
-              <span className="text-cyan-500 dark:text-cyan-400">*</span> i love building <span className="text-cyan-500 dark:text-cyan-400">products</span> that solve real problems. crafting <span className="text-cyan-500 dark:text-cyan-400">websites</span> for the past year, with a focus on <span className="text-cyan-500 dark:text-cyan-400">user experience</span> and clean code.
+              <span className="text-cyan-500 dark:text-cyan-400">*
+              </span> I love building
+
+              <LinkPreview isStatic={true} imageSrc="/products.png" url="">
+                {" "}
+                <span className="text-cyan-500 dark:text-cyan-400">products</span>
+                {" "}
+              </LinkPreview>
+              that solve real problems. crafting
+              <LinkPreview isStatic={true} imageSrc="/harry.png" url="">
+                <span className="text-cyan-500 dark:text-cyan-400">
+                  {" "}
+                  websites
+                  {" "}
+                </span>
+              </LinkPreview>
+              for the past year, with a focus on <LinkPreview isStatic={true} imageSrc="/user_exp.png" url="">
+                <span className="text-cyan-500 dark:text-cyan-400">
+                  {" "}
+                  user experiences
+                  {" "}
+                </span>
+              </LinkPreview> and clean code.
             </motion.p>
 
             <motion.div
