@@ -1,55 +1,52 @@
+"use client";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
-interface ExperienceItem {
-  company: string;
-  position: string;
-  duration: string;
-  description: string;
-  href?: string;
-  logoUrl?: string;
-}
+import { experiences } from '@/data/tags'
+import { easeOut, motion } from 'motion/react'
+
+import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
+
 
 export default function Experience() {
-  const experiences: ExperienceItem[] = [
-    {
-      company: "Turbo ML",
-      position: "Software Engineering Intern",
-      duration: "April 2025 – Present",
-      description: `Developed and deployed cutting-edge solutions, including multi-select preferences, 
-        browser-based video recording, and API integrations like WhatsApp/email reminders. 
-        Optimized workflows with autosave features and real-time scraping, 
-        leveraging Next.js, Supabase, and Cloudflare workers.`,
-      href: "https://turboml.com/",
-      logoUrl: "/turboml.jpg",
+
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      }
+    }
+  }
+
+  const expVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20
     },
-    {
-      company: "Puch AI",
-      position: "Software Engineering Intern",
-      duration: "June 2025 – Present",
-      description: `Developed and deployed cutting-edge solutions, including multi-select preferences, 
-        browser-based video recording, and API integrations like WhatsApp/email reminders. 
-        Optimized workflows with autosave features and real-time scraping, 
-        leveraging Next.js, Supabase, and Cloudflare workers.`,
-      href: "https://puch.ai",
-      logoUrl: "/puchai.jpg",
-    },
-    {
-      company: "Lamarr",
-      position: "Full stack developer Intern",
-      duration: "Nov 2024 – Dec 2024",
-      description: `Developed and deployed cutting-edge solutions, including multi-select preferences, 
-        browser-based video recording, and API integrations like WhatsApp/email reminders. 
-        Optimized workflows with autosave features and real-time scraping, 
-        leveraging Next.js, Supabase, and Cloudflare workers.`,
-      href: "https://www.lamarr.tech/",
-      logoUrl: "/lamarr.png",
-    },
-  ];
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: easeOut,
+      },
+    }
+  }
 
   return (
-    <div className="space-y-2">
+    
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+      className="space-y-2 ">
       {experiences.map((exp) => (
-        <div key={exp.company} className="flex items-center gap-4 mb-4">
+        <motion.div
+          variants={expVariants}
+          key={exp.company} className="flex items-center gap-4 mb-4  rounded-md p-2">
+             
           {exp.logoUrl && (
             <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
               <AvatarImage
@@ -81,13 +78,18 @@ export default function Experience() {
                   {exp.position}
                 </p>
               </div>
-              <p className="text-sm md:text-base text-neutral-800 dark:text-neutral-400 whitespace-nowrap">
-                {exp.duration}
-              </p>
+              <div className="text-sm md:text-base text-neutral-800 dark:text-neutral-400 whitespace-nowrap flex flex-col">
+                <div>
+
+                  {exp.duration}
+                </div>
+
+                <div>{exp.location}</div>
+              </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
