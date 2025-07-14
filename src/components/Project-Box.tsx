@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import {  Link, VideoIcon } from "lucide-react"
+import { Link, VideoIcon } from "lucide-react"
 import { motion, AnimatePresence } from "motion/react"
 import { featureDetails, features } from '@/data/tags'
 import { Badge } from "./ui/badge"
@@ -41,7 +41,7 @@ export default function ProjectsBox() {
                                     ? "dark:bg-gray-800 border-cyan-500 border-2 shadow-lg dark:shadow-cyan-500/20 "
                                     // : feature.highlighted
                                     //     ? "bg-gray-900 border-cyan-500 border-2 hover:bg-gray-800"
-                                        : "dark:bg-gray-900 border-gray-800 dark:hover:bg-gray-800 dark:hover:border-gray-700 "
+                                    : "dark:bg-gray-900 border-gray-800 dark:hover:bg-gray-800 dark:hover:border-gray-700 "
                                     }`}
                                 onClick={() => setSelectedFeature(feature.id)}
                             >
@@ -98,23 +98,32 @@ export default function ProjectsBox() {
 
                                         {
                                             featureDetails[selectedFeature]?.github && (
-                                                <motion.div className=" mb-4 cursor-pointer" whileHover={{scale:1.5,transition:{duration:0.2}}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
-                                                    <FaGithub />
-                                                </motion.div>
+                                                <a href={featureDetails[selectedFeature]?.github} target="_blank">
+
+                                                    <motion.div className=" mb-4 cursor-pointer" whileHover={{ scale: 1.5, transition: { duration: 0.2 } }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
+                                                        <FaGithub />
+                                                    </motion.div>
+                                                </a>
                                             )
                                         }
                                         {
                                             featureDetails[selectedFeature].livelink && (
-                                                <motion.div className=" mb-4 cursor-pointer" whileHover={{scale:1.5,transition:{duration:0.2}}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
-                                                    <Link />
-                                                </motion.div>
+                                                <a href={featureDetails[selectedFeature]?.livelink} target="_blank">
+
+                                                    <motion.div className=" mb-4 cursor-pointer" whileHover={{ scale: 1.5, transition: { duration: 0.2 } }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
+                                                        <Link />
+                                                    </motion.div>
+                                                </a>
                                             )
                                         }
                                         {
                                             featureDetails[selectedFeature].liveVideo && (
-                                                <motion.div className=" mb-4 cursor-pointer" whileHover={{scale:1.5,transition:{duration:0.2}}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
-                                                    <VideoIcon />
-                                                </motion.div>
+                                                <a href={featureDetails[selectedFeature]?.liveVideo} target="_blank">
+
+                                                    <motion.div className=" mb-4 cursor-pointer" whileHover={{ scale: 1.5, transition: { duration: 0.2 } }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
+                                                        <VideoIcon />
+                                                    </motion.div>
+                                                </a>
                                             )
                                         }
                                     </div>

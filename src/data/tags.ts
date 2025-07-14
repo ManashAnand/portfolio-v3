@@ -35,7 +35,7 @@ export const experiences = [
         position: "Full Stack Developer",
         duration: "April 2023 – March 2024",
 
-        href: "",
+        href: "https://unicorniz.com/",
         logoUrl: "/unicorniz.jpeg",
         location: "Remote/A&N"
     },
@@ -43,7 +43,7 @@ export const experiences = [
         company: "Symutte Labs",
         position: "Full stack developer Intern",
         duration: "Nov 2022 – Jan 2023",
-        href: "https://unicorniz.com/",
+        href: "",
         logoUrl: "/sym.png",
         location: "Remote/Mandi"
     },
